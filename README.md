@@ -1,3 +1,7 @@
+#NOTICE
+*This version is forked and adjusted to work in NW.js. It uses ethereumjs-util forced to use js only deps.*
+_Remember, it's just a workaround. Do not use this in production._
+
 # LightWallet
 
 A minimal ethereum javascript wallet.

@@ -13,7 +13,7 @@ module.exports = {
 (function (Buffer){
 'use strict';
 
-var util = require("ethereumjs-util");
+var util = require("ethereumjs-util-nwjs");
 var nacl = require('tweetnacl');
 
 function nacl_encodeHex(msgUInt8Arr) {
@@ -189,7 +189,7 @@ module.exports = {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":158,"ethereumjs-util":247,"tweetnacl":332}],3:[function(require,module,exports){
+},{"buffer":158,"ethereumjs-util-nwjs":247,"tweetnacl":332}],3:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -841,7 +841,7 @@ module.exports = KeyStore;
 "use strict";
 
 var Transaction = require("ethereumjs-tx");
-var util = require("ethereumjs-util");
+var util = require("ethereumjs-util-nwjs");
 
 var signTx = function signTx(keystore, pwDerivedKey, rawTx, signingAddress, hdPathString) {
 
@@ -924,7 +924,7 @@ var concatSig = function concatSig(signature) {
 module.exports.concatSig = concatSig;
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":158,"ethereumjs-tx":246,"ethereumjs-util":247}],5:[function(require,module,exports){
+},{"buffer":158,"ethereumjs-tx":246,"ethereumjs-util-nwjs":247}],5:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -12663,7 +12663,7 @@ Interpreter.prototype.checkLockTime = function (nLockTime) {
   return true;
 };
 
-/** 
+/**
  * Based on the inner loop of bitcoind's EvalScript function
  * bitcoind commit: b5d1b1092998bc95313856d535c632ea5a8f9104
  */
@@ -18022,11 +18022,11 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
   };
 
   /*
-  
+
   var zeros = [];
   var groupSizes = [];
   var groupBases = [];
-  
+
   var s = '';
   var i = -1;
   while (++i < BN.wordSize) {
@@ -18048,7 +18048,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
     groupSizes[base] = groupSize;
     groupBases[base] = groupBase;
   }
-  
+
   */
 
   var zeros = ['', '0', '00', '000', '0000', '00000', '000000', '0000000', '00000000', '000000000', '0000000000', '00000000000', '000000000000', '0000000000000', '00000000000000', '000000000000000', '0000000000000000', '00000000000000000', '000000000000000000', '0000000000000000000', '00000000000000000000', '000000000000000000000', '0000000000000000000000', '00000000000000000000000', '000000000000000000000000', '0000000000000000000000000'];
@@ -18439,11 +18439,11 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
     for (var k = 0; k < len; k++) {
       var minJ = Math.max(0, k - alen + 1);
       var maxJ = Math.min(k, blen - 1);
-  
+
       for (var j = minJ; j <= maxJ; j++) {
         var i = k - j;
         var mul = 'a[' + i + '] * b[' + j + ']';
-  
+
         if (j === minJ) {
           src.push('w = ' + mul + ' + c;');
           src.push('c = (w / shift) | 0;');
@@ -18460,7 +18460,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
              '  out.length++;',
              '}',
              'return out;');
-  
+
     return src.join('\n');
   }
   */
@@ -31152,11 +31152,11 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
   };
 
   /*
-  
+
   var zeros = [];
   var groupSizes = [];
   var groupBases = [];
-  
+
   var s = '';
   var i = -1;
   while (++i < BN.wordSize) {
@@ -31178,7 +31178,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
     groupSizes[base] = groupSize;
     groupBases[base] = groupBase;
   }
-  
+
   */
 
   var zeros = ['', '0', '00', '000', '0000', '00000', '000000', '0000000', '00000000', '000000000', '0000000000', '00000000000', '000000000000', '0000000000000', '00000000000000', '000000000000000', '0000000000000000', '00000000000000000', '000000000000000000', '0000000000000000000', '00000000000000000000', '000000000000000000000', '0000000000000000000000', '00000000000000000000000', '000000000000000000000000', '0000000000000000000000000'];
@@ -31579,11 +31579,11 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
     for (var k = 0; k < len; k++) {
       var minJ = Math.max(0, k - alen + 1);
       var maxJ = Math.min(k, blen - 1);
-  
+
       for (var j = minJ; j <= maxJ; j++) {
         var i = k - j;
         var mul = 'a[' + i + '] * b[' + j + ']';
-  
+
         if (j === minJ) {
           src.push('w = ' + mul + ' + c;');
           src.push('c = (w / shift) | 0;');
@@ -31600,7 +31600,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
              '  out.length++;',
              '}',
              'return out;');
-  
+
     return src.join('\n');
   }
   */
@@ -49790,7 +49790,7 @@ module.exports = require('./params.json');
 (function (Buffer){
 'use strict';
 
-var ethUtil = require('ethereumjs-util');
+var ethUtil = require('ethereumjs-util-nwjs');
 var fees = require('ethereum-common/params');
 var BN = ethUtil.BN;
 
@@ -50042,7 +50042,7 @@ Transaction.prototype.validate = function (stringError) {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":158,"ethereum-common/params":245,"ethereumjs-util":247}],247:[function(require,module,exports){
+},{"buffer":158,"ethereum-common/params":245,"ethereumjs-util-nwjs":247}],247:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -62421,7 +62421,7 @@ module.exports = SolidityTypeBytes;
     You should have received a copy of the GNU Lesser General Public License
     along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
-/** 
+/**
  * @file coder.js
  * @author Marek Kotewicz <marek@ethdev.com>
  * @date 2015
@@ -62451,7 +62451,7 @@ var SolidityCoder = function SolidityCoder(types) {
  *
  * @method _requireType
  * @param {String} type
- * @returns {SolidityType} 
+ * @returns {SolidityType}
  * @throws {Error} throws if no matching type is found
  */
 SolidityCoder.prototype._requireType = function (type) {
@@ -62700,7 +62700,7 @@ module.exports = SolidityTypeDynamicBytes;
     You should have received a copy of the GNU Lesser General Public License
     along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
-/** 
+/**
  * @file formatters.js
  * @author Marek Kotewicz <marek@ethdev.com>
  * @date 2015
@@ -62992,7 +62992,7 @@ module.exports = SolidityTypeInt;
     You should have received a copy of the GNU Lesser General Public License
     along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
-/** 
+/**
  * @file param.js
  * @author Marek Kotewicz <marek@ethdev.com>
  * @date 2015
@@ -63011,7 +63011,7 @@ var SolidityParam = function SolidityParam(value, offset) {
 
 /**
  * This method should be used to get length of params's dynamic part
- * 
+ *
  * @method dynamicPartLength
  * @returns {Number} length of dynamic part (in bytes)
  */
@@ -63232,13 +63232,13 @@ SolidityType.prototype.staticPartLength = function (name) {
 
 /**
  * Should be used to determine if type is dynamic array
- * eg: 
+ * eg:
  * "type[]" => true
  * "type[4]" => false
  *
  * @method isDynamicArray
  * @param {String} name
- * @return {Bool} true if the type is dynamic array 
+ * @return {Bool} true if the type is dynamic array
  */
 SolidityType.prototype.isDynamicArray = function (name) {
     var nestedTypes = this.nestedTypes(name);
@@ -63247,13 +63247,13 @@ SolidityType.prototype.isDynamicArray = function (name) {
 
 /**
  * Should be used to determine if type is static array
- * eg: 
+ * eg:
  * "type[]" => false
  * "type[4]" => true
  *
  * @method isStaticArray
  * @param {String} name
- * @return {Bool} true if the type is static array 
+ * @return {Bool} true if the type is static array
  */
 SolidityType.prototype.isStaticArray = function (name) {
     var nestedTypes = this.nestedTypes(name);
@@ -63262,7 +63262,7 @@ SolidityType.prototype.isStaticArray = function (name) {
 
 /**
  * Should return length of static array
- * eg. 
+ * eg.
  * "int[32]" => 32
  * "int256[14]" => 14
  * "int[2][3]" => 3
@@ -63337,7 +63337,7 @@ SolidityType.prototype.nestedTypes = function (name) {
  * Should be used to encode the value
  *
  * @method encode
- * @param {Object} value 
+ * @param {Object} value
  * @param {String} name
  * @return {String} encoded value
  */
@@ -63547,13 +63547,13 @@ module.exports = SolidityTypeUReal;
 
 /**
  * Utils
- * 
+ *
  * @module utils
  */
 
 /**
  * Utility functions
- * 
+ *
  * @class [utils] config
  * @constructor
  */
@@ -63592,7 +63592,7 @@ module.exports = {
     You should have received a copy of the GNU Lesser General Public License
     along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
-/** 
+/**
  * @file sha3.js
  * @author Marek Kotewicz <marek@ethdev.com>
  * @date 2015
@@ -64063,7 +64063,7 @@ var toChecksumAddress = function toChecksumAddress(address) {
     var checksumAddress = '0x';
 
     for (var i = 0; i < address.length; i++) {
-        // If ith character is 9 to f then make it uppercase 
+        // If ith character is 9 to f then make it uppercase
         if (parseInt(addressHash[i], 16) > 7) {
             checksumAddress += address[i].toUpperCase();
         } else {

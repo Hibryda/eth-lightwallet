@@ -1,5 +1,5 @@
 {
-  "name": "eth-lightwallet",
+  "name": "eth-lightwallet-nwjs",
   "version": "2.5.2",
   "description": "A lightweight ethereum javascript wallet.",
   "main": "index.js",
@@ -63,7 +63,7 @@
     "crypto-js": "^3.1.5",
     "elliptic": "^3.1.0",
     "ethereumjs-tx": "^1.1.1",
-    "ethereumjs-util": "^4.3.1",
+    "ethereumjs-util-nwjs": "^4.3.1",
     "rlp": "^2.0.0",
     "scrypt-async": "^1.2.0",
     "tweetnacl": "0.13.2",

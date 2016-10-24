@@ -4,7 +4,7 @@ var upgrade = require('../lib/upgrade')
 var signing = require('../lib/signing')
 var fixtures = require('./fixtures/keystore')
 var Transaction = require('ethereumjs-tx')
-var util = require("ethereumjs-util")
+var util = require("ethereumjs-util-nwjs")
 var nacl = require('tweetnacl')
 
 describe("Signing", function () {
